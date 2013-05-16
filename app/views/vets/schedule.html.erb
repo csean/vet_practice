@@ -1,0 +1,21 @@
+<h1>Schedule</h1>
+
+<table>
+  <tr>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Reason for visit</th>
+    <th>Customer</th>
+    <th>Pet</th>
+  </tr>
+
+<% @vet.current_appointments.each do |appointment| %>
+  <tr>
+    <td><%= appointment.appointment_time %></td>
+    <td><%= appointment.appointment_end_time %></td>
+    <td><%= appointment.reason_for_visit %></td>
+    <td><%= appointment.pet.customer.name %></td>
+    <td><%= appointment.pet.name %></td>
+  </tr>
+<% end %>
+</table>

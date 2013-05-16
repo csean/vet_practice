@@ -1,4 +1,15 @@
 VetPractice::Application.routes.draw do
+  resources :vets, as: "veterinaries" do
+      get 'schedule', on: :member
+  end
+
+
+  resources :customers do
+    resources :pets
+  end
+
+  resources :appointments
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

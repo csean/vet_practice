@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <th>Pet Name</th>
+    <th>Species</th>
+    <th>Breed</th>
+    <th>Date of Birth</th>
+    <th>Age</th>
+    <th>Weight</th>
+    <th>Next Appointment</th>
+  </tr>
+<% pets.each do |pet| %>
+  <tr>
+    <td><%= pet.name %></td>
+    <td><%= pet.species.humanize %></td>
+    <td><%= pet.breed %></td>
+    <td><%= pet.dob %></td>
+    <td><%= pet.age %></td>
+    <td><%= pet.weight %></td>
+    <td><%= pet.next_appointment.appointment_time %></td>
+  </tr>
+<% end %>
+</table>

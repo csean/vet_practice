@@ -37,6 +37,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    date_validator (0.7.0)
+      activemodel (>= 3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -53,6 +55,7 @@ GEM
     mime-types (1.23)
     multi_json (1.7.3)
     mysql2 (0.3.11)
+    nested_form (0.3.2)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -104,8 +107,10 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  date_validator
   jquery-rails
   mysql2
+  nested_form
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
