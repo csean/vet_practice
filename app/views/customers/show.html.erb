@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Customer name:</b>
+  <%= @customer.name %>
+</p>
+
+<%= render "pets", pets: @customer.pets if @customer.pets.count > 0 %>
+
+<%= link_to 'Add Pet', new_customer_pet_path(@customer) %> |
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back',customers_path %>

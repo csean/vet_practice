@@ -1,0 +1,64 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+baron:
+  name: Baron
+  species: dog
+  breed: Doberman
+  dob: 2009-04-27
+  weight: 100
+  customer: danielle
+
+gunner:
+  name: Gunner
+  species: dog
+  breed: English Setter
+  dob: 2010-06-10
+  weight: 50
+  customer: danielle
+
+garfield:
+  name: Garfield
+  species: cat
+  breed: Persian
+  dob: 1970-05-10
+  weight: 30
+  customer: john
+
+tweety:
+  name: Tweety
+  species: bird
+  breed: Parrot
+  dob: 2005-10-02
+  weight: 5
+  customer: john
+
+name_too_long:
+  name: <%= 'a' * 36 %>
+  species: dog
+  breed: Doberman
+  dob: 2009-04-27
+  weight: 100
+  customer: john
+
+fido:
+  name: Fideo
+  species: dog
+  dob: 2009-04-27
+  weight: 100
+  customer: john
+
+breed_too_long:
+  name: Rover
+  species: dog
+  breed: <%= 'a' * 36 %>
+  dob: 2009-04-27
+  weight: 100
+  customer: john
+
+no_customer:
+  name: Butch
+  species: dog
+  breed: Doberman
+  dob: 2009-04-27
+  weight: 100
+

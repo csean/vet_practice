@@ -1,0 +1,37 @@
+<h1>Listing vets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Graduated From</th>
+    <th>Years in Practice</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vets.each do |vet| %>
+  <tr>
+    <td><%= vet.name %></td>
+    <td><%= vet.address %></td>
+    <td><%= vet.city %></td>
+    <td><%= vet.state %></td>
+    <td><%= vet.zip %></td>
+    <td><%= vet.school %></td>
+    <td><%= vet.years_in_practice %></td>
+    <td><%= link_to 'Schedule', schedule_veterinary_path(vet) %></td>
+    <td><%= link_to 'Show', vet %></td>
+    <td><%= link_to 'Edit', edit_veterinary_path(vet) %></td>
+    <td><%= link_to 'Destroy', vet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vet', new_veterinary_path %>

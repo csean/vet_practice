@@ -1,0 +1,43 @@
+<%= form_for(@appointment) do |f| %>
+  <% if @appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% @appointment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :appointment_time %><br />
+    <%= f.datetime_select :appointment_time %>
+  </div>
+  <div class="field">
+    <%= f.label :reason_for_visit %><br />
+    <%= f.text_field :reason_for_visit %>
+  </div>
+  <div class="field">
+    <%= f.label :requires_reminder %><br />
+    <%= f.check_box :requires_reminder %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_id, "Customer" %><br />
+    <%= f.collection_select(:customer_id, Customer.all, :id, :name, {include_blank: 'Please select a customer'}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pet %><br />
+    <%= f.collection_select(:pet_id, [], :id, :name, {include_blank: 'Please select a customer first' }) %>
+  </div>
+  <div class="field">
+    <%= f.label :veterinary %><br />
+    <%= f.collection_select(:veterinary_id, Veterinary.all, :id, :name, {include_blank: 'Please select a vet'}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

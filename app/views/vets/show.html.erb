@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @vet.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @vet.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @vet.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @vet.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @vet.zip %>
+</p>
+
+<p>
+  <b>Graduated from:</b>
+  <%= @vet.school %>
+</p>
+
+<p>
+  <b>Years of Practice:</b>
+  <%= @vet.years_in_practice %>
+</p>
+
+
+<%= link_to 'Edit', edit_veterinary_path(@vet) %> |
+<%= link_to 'Back', veterinaries_path %>

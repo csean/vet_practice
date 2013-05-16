@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+baron_checkup:
+  appointment_time: 2013-06-15 10:00:00
+  reason_for_visit: annual checkup
+  requires_reminder: true
+  pet: baron
+  veterinary: sean
+
+gunner_sick:
+  appointment_time: 2013-06-15 10:30:00
+  reason_for_visit: coughing
+  requires_reminder: false
+  pet: gunner
+  veterinary: sean
+
+gunner_checkup:
+  appointment_time: 2013-04-15 10:30:00
+  reason_for_visit: annual checkup
+  requires_reminder: true
+  pet: gunner
+  veterinary: bob
+
+baron_sick:
+  appointment_time: 2013-04-15 10:30:00
+  reason_for_visit: vomiting
+  requires_reminder: false
+  pet: gunner
+  veterinary: sean
+
+conflict:
+  appointment_time: 2013-06-15 10:30:00
+  reason_for_visit: vomiting
+  requires_reminder: false
+  pet: garfield
+  veterinary: sean
+
+tweety_checkup:
+  appointment_time: 2013-07-15 10:30:00
+  reason_for_visit: annual checkup
+  requires_reminder: true
+  pet: tweety
+  veterinary: bob

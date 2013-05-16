@@ -1,0 +1,36 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+sean:
+  name: Sean Stowers
+  address: 123 Sesame Street
+  city: Midland
+  state: TX
+  zip: 79703
+  school: Texas Tech University
+  date_graduated: 2005
+
+bob:
+  name: Bob Smith
+  address: 987 Crawford Ln
+  city: Odessa
+  state: TX
+  zip: 79710
+  school: Texas A&M
+  date_graduated: 1985
+
+susan:
+  name:  Susan Schmidt
+  address: 456 Hickory Blvd
+  city: Midland
+  state: TX
+  school:  University of Texas
+  date_graduated: 1970
+
+name_too_long:
+  name: <%= 'a' * 36 %>
+  address: 123 Sesame Street
+  city: Midland
+  state: TX
+  zip: 79703
+  school: Texas Tech University
+  date_graduated: 2005

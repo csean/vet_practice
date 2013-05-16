@@ -1,0 +1,42 @@
+<h1>Listing pets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Species</th>
+    <th>Breed</th>
+    <th>Date of Birth</th>
+    <th>Age</th>
+    <th>Weight</th>
+    <th>Next Appointment</th>
+    <th>Reason for visit</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pets.each do |pet| %>
+  <tr>
+    <td><%= pet.name %></td>
+    <td><%= pet.species.humanize %></td>
+    <td><%= pet.breed %></td>
+    <td><%= pet.dob %></td>
+    <td><%= pet.age %></td>
+    <td><%= pet.weight %></td>
+    <% if pet.next_appointment.kind_of?(Appointment) %>
+    <td><%= pet.next_appointment.appointment_time %></td>
+    <td><%= pet.next_appointment.reason_for_visit %></td>
+    <% else %>
+    <td>N/A</td>
+    <td>N/A</td>
+    <% end %>
+    <td><%= link_to 'Edit', edit_customer_pet_path(@customer, pet) %></td>
+    <td><%= link_to 'Destroy', customer_pet_path(@customer, pet), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pet', new_customer_pet_path %> | <%= link_to 'Back to Customer', @customer %>
