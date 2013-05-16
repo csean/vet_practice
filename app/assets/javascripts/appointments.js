@@ -9,7 +9,7 @@ $(document).ready( function() {
                 success: function(data) {
                     $('#appointment_pet_id').empty();
                     $.each(data, function(key, value) {
-                        $('#appointment_pet_id').append($("<option ooga></option>")
+                        $('#appointment_pet_id').append($("<option></option>")
                             .attr("value", value.id).
                             text(value.name));
                     });
