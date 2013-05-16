@@ -1,3 +1,4 @@
+
 $(document).ready( function() {
     $('#appointment_customer_id').change(function() {
         var id = $(this).val();
